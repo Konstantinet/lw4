@@ -29,7 +29,7 @@ Texture::Texture(GLenum TextureTarget, const std::string& FileName)
 bool Texture::Load()
 {
     try {
-        Magick::InitializeMagick(nullptr);
+        
         m_pImage = new Magick::Image(m_fileName);
         m_pImage->write(&m_blob, "RGBA");
     }
